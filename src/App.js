@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Button, InputLabel, FormControl, TextField } from '@react/core';
-
-// import { Button } from "@mui/material/Button";
-// import { InputLabel } from "@mui/material/InputLabel";
-// import {  FormControl} from "@mui/material/FormControl";
-// import {  TextField} from "@mui/material/TextField";
+import  Button from "@mui/material/Button";
+import  InputLabel from "@mui/material/InputLabel";
+import  FormControl from "@mui/material/FormControl";
+import  TextField from "@mui/material/TextField";
+import Todo from "./Todo";
 
 import "./App.css";
 
@@ -29,7 +28,7 @@ function App() {
       <form>
         <FormControl>
           <InputLabel>Write a todo</InputLabel>
-          <TextField id="standard-basic" value={input} label="Standard" variant="standard" onChange={eventHandler}/>
+          <TextField id="standard-basic" value={input}  variant="standard" onChange={eventHandler}/>
           
         </FormControl>
         <Button
@@ -44,7 +43,7 @@ function App() {
 
       <ul>
         {todos.map((todo) => (
-          <li>{todo}</li>
+         <Todo text={todo}/>
         ))}
       </ul>
     </div>
